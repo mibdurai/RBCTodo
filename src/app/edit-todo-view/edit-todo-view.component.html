@@ -5,7 +5,7 @@
 <form #todoform="ngForm">
   <div class="todo-fields">
     <mat-form-field class="edit-todo-view-form">
-      <input matInput #task="ngModel" required [(ngModel)]="todo.task" placeholder="Task" id="task" name="task">
+      <textarea matInput #task="ngModel" required [(ngModel)]="todo.task" placeholder="Task" id="task" name="task"></textarea>
 
     </mat-form-field>
     <div *ngIf="task.invalid && (task.dirty || task.touched)" class="alert alert-danger">

@@ -2,7 +2,7 @@
   "todos": [
     {
       "task": "Book Ticket",
-      "completed": false,
+      "completed": true,
       "duedate": "2019-08-02",
       "id": 10
     },
@@ -15,8 +15,32 @@
     {
       "task": "Interview",
       "completed": false,
-      "duedate": "2019-07-26",
+      "duedate": "2019-07-30",
       "id": 13
+    },
+    {
+      "task": "Test",
+      "completed": false,
+      "duedate": "2019-07-03",
+      "id": 14
+    },
+    {
+      "task": "FSE",
+      "completed": false,
+      "duedate": "2019-07-24",
+      "id": 15
+    },
+    {
+      "task": "Complete FSE",
+      "completed": false,
+      "duedate": "2019-07-31",
+      "id": 16
+    },
+    {
+      "task": "All Done",
+      "completed": false,
+      "duedate": "2019-06-12",
+      "id": 17
     }
   ]
 }

@@ -2,7 +2,7 @@
 	<li *ngFor="let todo of todos">
 		<div class="header" [class.completed]="todo.completed" [class.passeddate]="checkDatePassed(todo)">
 			<div class="title">
-				<p>{{todo.duedate | date:'MMM dd, yyyy'}}</p>
+				<h4 class="datestyle">{{todo.duedate | date:'MMM dd, yyyy'}}</h4>
 			</div>
 			<div class="action">
 				<i class="glyphicon glyphicon-pencil icon" (click)="OpenEditTodoView(todo)"></i>
@@ -11,8 +11,8 @@
 			</div>
 
 		</div>
-		<a>
-			<h3> {{todo.task}} </h3>
+		<a [class.completed]="todo.completed" [class.passeddate]="checkDatePassed(todo)">
+			<h3 class="taskstyle"> {{todo.task}} </h3>
 		</a>
 
 	</li>

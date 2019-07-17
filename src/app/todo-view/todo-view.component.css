@@ -30,19 +30,15 @@
     top: -4px !important;
     cursor: pointer;
 }
-.glyphicon-pencil
+
+.datestyle
 {
-color: blue !important;
+margin-top: -1px !important;
 }
-.glyphicon-ok{
-color: green !important;
+.taskstyle{
+  margin-top: 5px !important;
+  font-size: 20px !important;
 }
-.glyphicon-trash{
-color: red !important;
-}
-
-
-
 h2,p{
   font-size:100%;
   font-weight:normal;
@@ -57,7 +53,7 @@ ul{
 ul li a{
   text-decoration:none;
   color:#000;
-  background:#ececec;
+  background:#fff475;
   display:block;
   min-height:10em;
   width:18em;
@@ -78,7 +74,8 @@ ul li{
 .header{
   text-decoration:none;
   color:#000;
-  background:#e4e400;
+  background:#fff475;
+  border-bottom: 1px solid #989595;
   display:block;
   height:3em;
   width:18em;
@@ -91,8 +88,8 @@ ul li{
   box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 .completed{
-    background-color: #5cd65c !important;
+    background-color: #ccff90 !important;
 }
 .passeddate{
-     background-color:#ff6e6e;
+     background-color:#f28b82 !important;
 }
