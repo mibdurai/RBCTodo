@@ -1,0 +1,15 @@
+{
+  "todos": [
+    {
+      "task": "Book Tickets",
+      "completed": false,
+      "duedate": "2019-07-19",
+      "id": 1
+    },
+    {
+      "task": "Return Ticketss",
+      "completed": false,
+      "id": 2
+    }
+  ]
+}

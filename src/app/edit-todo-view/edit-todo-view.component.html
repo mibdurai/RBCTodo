@@ -1,0 +1,29 @@
+<!-- Label to display any error messages -->
+<label class="error-message">{{ errMessage }}</label>
+
+
+<form #todoform="ngForm">
+  <div class="todo-fields">
+    <mat-form-field>
+      <input matInput #task="ngModel" required [(ngModel)]="todo.task" placeholder="Task" id="task" name="task">
+
+    </mat-form-field>
+    <div *ngIf="task.invalid && (task.dirty || task.touched)" class="alert alert-danger">
+      <div *ngIf="task.errors.required">
+        Task is required.
+      </div>
+    </div>
+    <mat-form-field>
+      <input matInput type="date" [(ngModel)]="todo.duedate" placeholder="Due Date" id="duedate" name="duedate">
+    </mat-form-field>
+  </div>
+  <div class="done-button">
+    <button type="submit" mat-raised-button class="mat-raised-button mat-primary" color="primary" [disabled]="!todoform.valid"
+      (click)="onSave()"><span class="mat-button-wrapper">Save</span>
+      <div class="mat-button-ripple mat-ripple" matripple="">
+      </div>
+      <div class="mat-button-focus-overlay"></div>
+      </button>
+
+  </div>
+</form>

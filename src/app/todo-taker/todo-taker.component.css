@@ -1,0 +1,22 @@
+.todo-add-container
+{
+    width: 50vw;
+    margin: auto;
+    margin-top: 20px;
+}
+.todo-fields
+{
+    display: flex;
+    flex-direction: column;
+
+}
+.done-button
+{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.todocard
+{
+    margin-right: 10px;
+}

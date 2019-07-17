@@ -1,0 +1,4 @@
+<mat-card class="todocard" (click)='OpenEditTodoView()'>
+    <mat-card-title>{{todo.task}}</mat-card-title>
+    <mat-card-content>{{todo.duedate | date:'MMM dd, yyyy'}}</mat-card-content>
+  </mat-card>

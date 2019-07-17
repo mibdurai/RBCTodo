@@ -1,0 +1,12 @@
+
+<div class="keep-c-todo-container">  
+	<!-- Include the todos collection with each todo rendered as a separate TodoComponent -->
+	<div class="todos-container">
+		<mat-list *ngFor="let todo of todos">
+		  <mat-list-item >
+        <app-todo [todo]="todo"></app-todo>		
+		  </mat-list-item>
+		</mat-list>
+	  </div>
+	  
+</div>
