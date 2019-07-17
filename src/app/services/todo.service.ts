@@ -54,6 +54,10 @@ export class TodoService {
   editTodo(todo: Todo): Observable<Todo> {
     return this.http.put<Todo>(environment.servicebaseurl + '/todos/' + todo.id, todo)
       .pipe(
+      tap(() => {
+        this.sortTodo()
+        this.todosSubject.next(this.todos);
+      }),
       catchError(this.handleError('updateTodo', todo))
       );
   }
@@ -62,8 +66,7 @@ export class TodoService {
     return this.http.delete(environment.servicebaseurl + '/todos/' + todo.id)
       .pipe(
       tap(() => {
-        this.todos = this.todos.filter(obj => obj.id !== todo.id);
-        this.sortTodo()
+        this.todos = this.todos.filter(obj => obj.id !== todo.id);       
         this.todosSubject.next(this.todos);
       })
       , catchError(
