@@ -1,10 +1,10 @@
 <!-- Label to display any error messages -->
 <label class="error-message">{{ errMessage }}</label>
 
-
+<!-- Todo Edit form -->
 <form #todoform="ngForm">
   <div class="todo-fields">
-    <mat-form-field>
+    <mat-form-field class="edit-todo-view-form">
       <input matInput #task="ngModel" required [(ngModel)]="todo.task" placeholder="Task" id="task" name="task">
 
     </mat-form-field>
@@ -13,7 +13,7 @@
         Task is required.
       </div>
     </div>
-    <mat-form-field>
+    <mat-form-field class="edit-todo-view-form">
       <input matInput type="date" [(ngModel)]="todo.duedate" placeholder="Due Date" id="duedate" name="duedate">
     </mat-form-field>
   </div>

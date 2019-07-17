@@ -19,8 +19,7 @@ const route: Routes = [
                 redirectTo: 'view/todoview',
                 pathMatch: 'full'
             },
-            {
-                // path: 'view/editview',
+            {               
                 path: 'todo/:todoId/edit',
                 component: EditTodoOpenerComponent,
                 outlet: 'todoEditOutlet'

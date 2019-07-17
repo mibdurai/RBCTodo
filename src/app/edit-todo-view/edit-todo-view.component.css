@@ -1,0 +1,13 @@
+.edit-todo-view-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.button-done
+{
+    display: flex;
+    justify-content: flex-end;
+}
+.todo-fields{
+    min-width: 500px;
+}

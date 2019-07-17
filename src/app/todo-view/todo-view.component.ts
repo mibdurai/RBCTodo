@@ -45,6 +45,7 @@ export class TodoViewComponent implements OnInit {
       });
 
   }
+  
   checkDatePassed(todo: Todo) {
     var myDate = new Date(todo.duedate);
     var today = new Date();

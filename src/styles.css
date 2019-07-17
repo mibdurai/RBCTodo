@@ -1,13 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
- .bg-primary
+ .primary
  {
      background-color: #006ac3 !important;
  }
- .mat-primary
-{
-  background-color: #006ac3 !important;
-}
+ .error-message
+ {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+ }
+ 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', sans-serif; }

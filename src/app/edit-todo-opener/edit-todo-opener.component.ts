@@ -12,22 +12,22 @@ import { RouterService } from '../services/router.service';
   templateUrl: './edit-todo-opener.component.html',
   styleUrls: ['./edit-todo-opener.component.css']
 })
-export class EditTodoOpenerComponent  {
+export class EditTodoOpenerComponent {
 
-todoId: number;
+  todoId: number;
 
   constructor(private matDialog: MatDialog, private activatedRouter: ActivatedRoute, private routerService: RouterService) {
     this.activatedRouter.params.subscribe(params => this.todoId = params.todoId);
     this.matDialog.open(EditTodoViewComponent, {
-      data: { todoId : this.todoId }
+      data: { todoId: this.todoId }
     }).afterClosed().subscribe(result => {
 
-     this.routerService.routeToDashboard();
+      this.routerService.routeToDashboard();
     });
   }
 
-  ngOnDestroy(){
-     this.routerService.routeToDashboard();
+  ngOnDestroy() {
+    this.routerService.routeToDashboard();
   }
 
 }

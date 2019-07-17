@@ -24,8 +24,6 @@ import { EditTodoOpenerComponent } from './edit-todo-opener/edit-todo-opener.com
 import { EditTodoViewComponent } from './edit-todo-view/edit-todo-view.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

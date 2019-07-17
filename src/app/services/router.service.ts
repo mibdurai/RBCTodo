@@ -13,7 +13,7 @@ export class RouterService {
     this.router.navigate(['dashboard']);
   }
 
-    routeToEditTodoView(todoId) {
+  routeToEditTodoView(todoId) {
     this.router.navigate(['dashboard',
       {
         outlets: {
@@ -26,10 +26,4 @@ export class RouterService {
     this.location.back();
   }
 
-  routeToTodoView() {
-    this.router.navigate(['dashboard/view/todoview']);
-  }
-
-  
-
-}
+ }

@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit, OnDestroy } from '@angular/core';
-import {TodoService} from '../services/todo.service'
-import { MatDialog, MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
-import {Todo} from '../model/todo';
+import { TodoService } from '../services/todo.service'
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Todo } from '../model/todo';
 import { RouterService } from '../services/router.service';
 
 
@@ -12,14 +12,13 @@ import { RouterService } from '../services/router.service';
 })
 export class EditTodoViewComponent implements OnInit {
 
-  todo: Todo=new Todo();
-  states: Array<string> = ['not-started', 'started', 'completed'];
+  todo: Todo = new Todo();  
   errMessage: string;
 
   constructor(private dialogRef: MatDialogRef<EditTodoViewComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any, 
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private todoService: TodoService,
-    private routerService: RouterService){
+    private routerService: RouterService) {
   }
 
   ngOnInit() {
@@ -27,17 +26,17 @@ export class EditTodoViewComponent implements OnInit {
   }
 
   onSave() {
-    this.todoService.editTodo(this.todo).subscribe(res=>{
-
+    this.todoService.editTodo(this.todo).subscribe(res => {
+      this.dialogRef.close();
     },
-    err => {
-      this.errMessage = err.message;
-    });
-    this.dialogRef.close();
+      err => {
+        this.errMessage = err.message;
+      });
+
   }
 
-
-  ngOnDestroy(){
+//On popup close naviage to dashboard page
+  ngOnDestroy() {
     this.routerService.routeBack();
   }
 

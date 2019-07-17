@@ -4,7 +4,8 @@ import { BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment'
 import { Observable, of } from 'rxjs';
-import { tap, map, catchError } from 'rxjs/operators'
+import { tap, catchError } from 'rxjs/operators'
+
 
 
 @Injectable({
@@ -15,12 +16,12 @@ export class TodoService {
   todos: Array<Todo>;
   todosSubject: BehaviorSubject<Array<Todo>>;
 
-  constructor(public http: HttpClient) {
+  constructor(private http: HttpClient) {
     this.todos = [];
     this.todosSubject = new BehaviorSubject(this.todos);
     this.fetchTodoFromServer();
   }
-
+  //Fetch the todo list on the load
   fetchTodoFromServer() {
     this.http.get<Array<Todo>>(environment.servicebaseurl + '/todos').subscribe(res => {
       this.todos = res;
@@ -30,20 +31,21 @@ export class TodoService {
 
   }
 
+  //Add New todo 
   addTodo(todo: Todo): Observable<Todo> {
     return this.http.post<Todo>(environment.servicebaseurl + '/todos', todo)
       .pipe(
       tap((newtodo: Todo) => {
         this.todos.push(newtodo);
         this.sortTodo();
-        this.todosSubject.next(this.todos);
+        this.todosSubject.next(this.todos);//push the new todo to BehaviorSubject
       })
       , catchError(
-
         this.handleError<Todo>('addTodo', new Todo())
       )
       );
   }
+
   getTodos(): BehaviorSubject<Array<Todo>> {
     return this.todosSubject;
   }
@@ -77,7 +79,8 @@ export class TodoService {
     return tododata;
   }
 
-  sortTodo() {
+  //sort the todo by date
+  private sortTodo() {
     this.todos.sort((a: Todo, b: Todo) => {
       return this.getTime(a.duedate) - this.getTime(b.duedate);
     });
@@ -88,11 +91,8 @@ export class TodoService {
   }
 
 
-  public sortByDueDate(): void {
-
-  }
-
-  handleError<T>(operation = 'operation', result?: T) {
+  //To log the error 
+  private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
       console.error(error); // log to console instead

@@ -1,6 +1,6 @@
 <ul>
 	<li *ngFor="let todo of todos">
-		<div class="header" [class.completed]="todo.completed" [class.passeddate]="checkDatePassed(todo)" >
+		<div class="header" [class.completed]="todo.completed" [class.passeddate]="checkDatePassed(todo)">
 			<div class="title">
 				<p>{{todo.duedate | date:'MMM dd, yyyy'}}</p>
 			</div>
