@@ -87,7 +87,7 @@ export class TodoService {
   }
 
   private getTime(date?: Date) {
-    return date != null ? new Date(date).getTime() : -1;
+    return date != null ? new Date(date).getTime() : Number.MAX_SAFE_INTEGER;
   }
 
 
