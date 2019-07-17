@@ -10,7 +10,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TodoViewComponent } from './todo-view/todo-view.component'
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { TodoComponent } from './todo/todo.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -32,7 +31,6 @@ import { EditTodoViewComponent } from './edit-todo-view/edit-todo-view.component
     TodoTakerComponent,
     DashboardComponent,
     TodoViewComponent,
-    TodoComponent,
     EditTodoOpenerComponent,
     EditTodoViewComponent
   ],
