@@ -1,12 +1,19 @@
+<ul>
+	<li *ngFor="let todo of todos">
+		<div class="header" [class.completed]="todo.completed" [class.passeddate]="checkDatePassed(todo)" >
+			<div class="title">
+				<p>{{todo.duedate | date:'MMM dd, yyyy'}}</p>
+			</div>
+			<div class="action">
+				<i class="glyphicon glyphicon-pencil icon" (click)="OpenEditTodoView(todo)"></i>
+				<i class="glyphicon glyphicon-ok icon" *ngIf="!todo.completed" (click)="MarkComplete(todo)"></i>
+				<i class="glyphicon glyphicon-trash icon" (click)="DeleteTodo(todo)"></i>
+			</div>
 
-<div class="keep-c-todo-container">  
-	<!-- Include the todos collection with each todo rendered as a separate TodoComponent -->
-	<div class="todos-container">
-		<mat-list *ngFor="let todo of todos">
-		  <mat-list-item >
-        <app-todo [todo]="todo"></app-todo>		
-		  </mat-list-item>
-		</mat-list>
-	  </div>
-	  
-</div>
+		</div>
+		<a>
+			<h3> {{todo.task}} </h3>
+		</a>
+
+	</li>
+</ul>

@@ -13,11 +13,7 @@ export class RouterService {
     this.router.navigate(['dashboard']);
   }
 
-  routeToLogin() {
-    this.router.navigate(['login']);
-  }
-
-  routeToEditTodoView(todoId) {
+    routeToEditTodoView(todoId) {
     this.router.navigate(['dashboard',
       {
         outlets: {
@@ -30,12 +26,10 @@ export class RouterService {
     this.location.back();
   }
 
-  routeToNoteView() {
-    this.router.navigate(['dashboard/view/noteview']);
+  routeToTodoView() {
+    this.router.navigate(['dashboard/view/todoview']);
   }
 
-  routeToListView() {
-    this.router.navigate(['dashboard/view/listview']);     
-  }
+  
 
 }

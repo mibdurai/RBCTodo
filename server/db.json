@@ -1,15 +1,39 @@
 {
   "todos": [
     {
-      "task": "Book Tickets",
+      "task": "Book Ticket",
       "completed": false,
-      "duedate": "2019-07-19",
+      "duedate": "2019-07-18",
       "id": 1
     },
     {
-      "task": "Return Ticketss",
-      "completed": false,
+      "task": "Book Return Ticket",
+      "completed": true,
+      "duedate": "2019-07-25",
       "id": 2
+    },
+    {
+      "task": "pack ",
+      "completed": true,
+      "duedate": "2019-07-17",
+      "id": 3
+    },
+    {
+      "task": "check apppa",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "task": "Testaasdfasd",
+      "completed": false,
+      "duedate": "2019-07-25",
+      "id": 5
+    },
+    {
+      "task": "over taks",
+      "completed": false,
+      "duedate": "2019-07-10",
+      "id": 6
     }
   ]
 }

@@ -34,7 +34,7 @@ addTodoDetails() {
         }
       );
 
-      this.todo = new Todo();
+   //   this.todo = new Todo();
     } else {
       this.errMessage = 'Title and Text both are required fields';
     }

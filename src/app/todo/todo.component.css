@@ -1,3 +1,28 @@
 .todocard{
     margin: 10px 0 0 10px;
 }
+.title
+{
+    float: left;
+}
+.action
+{
+    float: right;
+    margin-left: 25px;
+}
+.icon
+{
+    font-size: 14px;
+    margin: 5px;
+}
+.glyphicon-pencil
+{
+color: blue !important;
+}
+.glyphicon-ok{
+color: green !important;
+}
+.glyphicon-trash{
+color: red !important;
+}
+

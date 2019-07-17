@@ -2,7 +2,7 @@ export class Todo {
     id: Number;
     task: string;
     completed: boolean;
-    dueDate: Date; // nullable
+    duedate: Date; // nullable
 
     constructor() {
         this.task = '';

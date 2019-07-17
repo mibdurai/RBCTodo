@@ -1,4 +1,11 @@
-<mat-card class="todocard" (click)='OpenEditTodoView()'>
-    <mat-card-title>{{todo.task}}</mat-card-title>
-    <mat-card-content>{{todo.duedate | date:'MMM dd, yyyy'}}</mat-card-content>
-  </mat-card>
+<mat-card class="todocard">
+  <mat-card-title>
+    <div class="title"> {{todo.task}} </div>
+    <div class="action">
+      <i class="glyphicon glyphicon-pencil icon" (click)="OpenEditTodoView()"></i>
+      <i class="glyphicon glyphicon-ok icon" (click)="MarkComplete()"></i>
+      <i class="glyphicon glyphicon-trash icon" (click)="DeleteTodo()"></i>
+    </div>
+  </mat-card-title>
+  <mat-card-content>{{todo.duedate | date:'MMM dd, yyyy'}}</mat-card-content>
+</mat-card>

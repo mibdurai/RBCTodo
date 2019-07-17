@@ -5,5 +5,9 @@
  {
      background-color: #006ac3 !important;
  }
+ .mat-primary
+{
+  background-color: #006ac3 !important;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', sans-serif; }
