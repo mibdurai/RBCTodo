@@ -85,12 +85,12 @@ export class TodoService {
   //sort the todo by date
   private sortTodo() {
     this.todos.sort((a: Todo, b: Todo) => {
-      return this.getTime(a.duedate) - this.getTime(b.duedate);
+      return this.getTime(a.completed,a.duedate) - this.getTime(b.completed,b.duedate);
     });
   }
 
-  private getTime(date?: Date) {
-    return date != null ? new Date(date).getTime() : Number.MAX_SAFE_INTEGER;
+  private getTime(completed :boolean,date?: Date) {
+    return (date != null  && !completed)? new Date(date).getTime() : Number.MAX_SAFE_INTEGER;
   }
 
 
