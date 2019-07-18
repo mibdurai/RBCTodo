@@ -14,8 +14,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import { MatSelectModule } from '@angular/material/select';
-import { MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -46,17 +44,12 @@ import { EditTodoViewComponent } from './edit-todo-view/edit-todo-view.component
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatDialogModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
+    MatDialogModule 
   ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    EditTodoViewComponent,
-    EditTodoOpenerComponent
+    EditTodoViewComponent
   ]
 })
 export class AppModule { }
