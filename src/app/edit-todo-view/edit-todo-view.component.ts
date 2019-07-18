@@ -10,7 +10,7 @@ import { RouterService } from '../services/router.service';
   templateUrl: './edit-todo-view.component.html',
   styleUrls: ['./edit-todo-view.component.css']
 })
-export class EditTodoViewComponent implements OnInit {
+export class EditTodoViewComponent implements OnInit,OnDestroy {
 
   todo: Todo = new Todo();  
   errMessage: string;

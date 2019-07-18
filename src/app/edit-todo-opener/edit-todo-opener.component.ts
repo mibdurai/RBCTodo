@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EditTodoViewComponent } from '../edit-todo-view/edit-todo-view.component';
 import { ActivatedRoute } from '@angular/router';
@@ -12,7 +12,7 @@ import { RouterService } from '../services/router.service';
   templateUrl: './edit-todo-opener.component.html',
   styleUrls: ['./edit-todo-opener.component.css']
 })
-export class EditTodoOpenerComponent {
+export class EditTodoOpenerComponent implements OnDestroy  {
 
   todoId: number;
 
